@@ -2,6 +2,11 @@
 
 [![travis][travis-image]][travis-url] [![codecov][codecov-image]][codecov-url]
 
+[travis-image]: https://img.shields.io/travis/speedracer/speedmetrics.svg?style=flat
+[travis-url]: https://travis-ci.org/speedracer/speedmetrics
+[codecov-image]: https://img.shields.io/codecov/c/github/speedracer/speedmetrics.svg
+[codecov-url]: https://codecov.io/github/speedracer/speedmetrics
+
 Collect meaningful metrics from Chrome's trace events.
 
 ## Quickstart
