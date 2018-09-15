@@ -26,8 +26,7 @@
     "*.d.ts"
   ],
   "dependencies": {
-    "lodash": "^4.17.11",
-    "stable": "^0.1.8"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.116",
