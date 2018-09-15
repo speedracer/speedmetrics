@@ -45,7 +45,7 @@ console.log(metrics)
 
 ### metrics(traceEvents)
 
-Accepts a trace events object and return a promise resolving to collected metrics.
+Accepts a trace events object and return collected metrics.
 
 ```js
 readFile('trace.json', 'utf8', async (err, data) => {
