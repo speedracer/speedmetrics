@@ -43,7 +43,7 @@ console.log(metrics)
 
 ## API
 
-### metrics(traceEvents)
+### collectMetrics(traceEvents)
 
 Accepts a trace events object and return collected metrics.
 
