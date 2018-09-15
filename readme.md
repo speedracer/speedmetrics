@@ -22,7 +22,7 @@ npm install speedmetrics
 ```js
 import collectMetrics from 'speedmetrics'
 
-const metrics = await collectMetrics('trace.json')
+const metrics = await collectMetrics(trace.traceEvents)
 console.log(metrics)
 ```
 ```js
@@ -42,14 +42,6 @@ console.log(metrics)
 ```
 
 ## API
-
-### metrics(filename)
-
-Loads a trace file name and return a promise resolving to collected metrics.
-
-```js
-const metrics = await collectMetrics('trace.json')
-```
 
 ### metrics(traceEvents)
 
