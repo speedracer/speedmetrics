@@ -57,6 +57,6 @@ Accepts a trace events object and return a promise resolving to collected metric
 
 ```js
 readFile('trace.json', 'utf8', async (err, data) => {
-  const metrics = await collectMetrics(data.taceEvents)
+  const metrics = await collectMetrics(data.traceEvents)
 })
 ```
