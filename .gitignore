@@ -1,6 +1,9 @@
 # project
 .nyc_output
 .rpt2_cache
+index.js
+index.d.ts
+types.d.ts
 coverage/
 
 # node
