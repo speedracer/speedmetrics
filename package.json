@@ -1,6 +1,6 @@
 {
   "name": "speedmetrics",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Collect meaningful metrics from Chrome's trace events.",
   "main": "index.js",
   "types": "index.d.ts",
