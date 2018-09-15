@@ -6,17 +6,19 @@ import { memoize } from 'lodash'
 import collectMetrics from '../src'
 import { TraceEvent } from '../src/types'
 
-const readTrace = memoize((filename: string): Promise<TraceEvent[]> => {
-  return new Promise((resolve, reject) => {
-    readFile(filename, (err, rawData) => {
-      if (err) reject(err)
-      gunzip(rawData, (err, data) => {
+const readTrace = memoize(
+  (filename: string): Promise<TraceEvent[]> => {
+    return new Promise((resolve, reject) => {
+      readFile(filename, (err, rawData) => {
         if (err) reject(err)
-        resolve(JSON.parse(data.toString('utf8')).traceEvents)
+        gunzip(rawData, (err, data) => {
+          if (err) reject(err)
+          resolve(JSON.parse(data.toString('utf8')).traceEvents)
+        })
       })
     })
-  })
-})
+  }
+)
 
 test('collect events and timings', async t => {
   const trace = await readTrace('./test/fixtures/trace.json.gz')
@@ -33,7 +35,7 @@ test('compute timings of each event', async t => {
   t.is(typeof metrics.timings.navigationStart, 'number')
 })
 
-test('collect events from the tab\'s process', async t => {
+test("collect events from the tab's process", async t => {
   const trace = await readTrace('./test/fixtures/trace.json.gz')
   const metrics = await collectMetrics(trace)
 
