@@ -1,0 +1,65 @@
+{
+  "name": "speedmetrics",
+  "version": "0.0.0",
+  "description": "Collect meaningful metrics from Chrome's trace events.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "https://github.com/speedracer/metrics",
+  "author": "Nicolas Gryman <ngryman@gmail.com> (https://ngryman.sh)",
+  "license": "MIT",
+  "keywords": [
+    "performance",
+    "metrics",
+    "chrome",
+    "devtools",
+    "trace"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write 'src/*.ts'",
+    "test": "nyc ava",
+    "prepublishOnly": "yarn build"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "stable": "^0.1.8"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.9.4",
+    "ava": "^1.0.0-beta.8",
+    "husky": "^1.0.0-rc.14",
+    "nyc": "^13.0.1",
+    "prettier": "^1.14.2",
+    "rollup": "^0.65.2",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.3"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format"
+    }
+  }
+}
