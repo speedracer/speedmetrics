@@ -4,7 +4,7 @@
   "description": "Collect meaningful metrics from Chrome's trace events.",
   "main": "index.js",
   "types": "index.d.ts",
-  "repository": "https://github.com/speedracer/metrics",
+  "repository": "https://github.com/speedracer/speedmetrics",
   "author": "Nicolas Gryman <ngryman@gmail.com> (https://ngryman.sh)",
   "license": "MIT",
   "keywords": [
