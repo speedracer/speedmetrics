@@ -1,4 +1,4 @@
-# ![Speed Metrics]()
+# ![Speedmetrics](https://raw.githubusercontent.com/ngryman/artworks/master/speedmetrics/heading/speedmetrics@2x.png)
 
 [![travis][travis-image]][travis-url] [![codecov][codecov-image]][codecov-url]
 
